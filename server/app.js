@@ -6,7 +6,6 @@ const port = 8081
 
 app.use(cors());
 
-//app.get('/', (req, res) => res.send('Welcome to Make REST API Calls In Express!'))
 app.get('/', (req, res) => {
     api_helper.make_API_call('http://192.168.1.143/')
     .then(response => {
