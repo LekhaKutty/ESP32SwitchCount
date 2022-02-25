@@ -9,7 +9,7 @@ const GetButtonCount = () =>{
         const fetchButtonData = async () => {
             try{
                 const response = await FetchAPI.get('/');
-                console.log("data",response.data.Temperature);
+                console.log("data",response);
                 setTemperature(response.data.Temperature);
                 
             }catch(err){
