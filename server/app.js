@@ -24,6 +24,15 @@ const fetch = require('node-fetch')
 const time = new Date()
 //setTime(time.toUTCString())
 
+app.get('/', (req,res) => {
+  res.status(200).json({
+    staus:"Success",
+    data: temperature_datas
+  });
+  
+  
+})
+
 function saveData(metrics) {
   //console.log('time seconds',time.getSeconds())
   //console.log("metrics",metrics)
@@ -39,9 +48,7 @@ const getData = () => {
     .then(data => saveData(data))
     .catch(err => console.error(err))
 }
-app.get('/',(req,res) => {
-  res.json(JSON.stringify(temperature_datas));
-})
+
 
 const interval = setInterval(getData, 5000);
 
