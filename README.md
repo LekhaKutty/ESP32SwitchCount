@@ -1,1 +1,1 @@
-# ESP32SwitchCount
+# ESP32 Temperature sensor
